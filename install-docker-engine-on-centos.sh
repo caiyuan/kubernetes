@@ -14,3 +14,12 @@ sudo yum install -y $URL$E
 ## install docker-ce:latest
 curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh --mirror Aliyun
 
+## mirror
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+    "registry-mirrors": [
+        "https://hub-mirror.c.163.com/"
+    ]
+}
+EOF
+
